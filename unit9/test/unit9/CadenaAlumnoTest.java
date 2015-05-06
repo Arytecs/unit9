@@ -25,6 +25,14 @@ public class CadenaAlumnoTest {
         boolean igualesDevuelta=CadenaAlumno.sonIguales("entornos", "ento");
         boolean real="entornos".equals("ento");
         assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.sonIguales("ento", "entornos");
+        real="ento".equals("entornos");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.sonIguales("entornos", "sonrotne");
+        real="entornos".equals("sonrotne");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.sonIguales("entornos", "entornos");
+        real="entornos".equals("entornos");
     }
 
     /**
