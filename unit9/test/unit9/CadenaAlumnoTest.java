@@ -145,6 +145,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testConvertirMayusculas() {
+        String devuelto=CadenaAlumno.convertirMayusculas("Hola");
+        String real="Hola".toUpperCase();
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -152,6 +155,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testConvertirMinusculas() {
+        String devuelto=CadenaAlumno.convertirMinusculas("HOLa");
+        String real="HOLa".toLowerCase();
+        assertEquals(real,devuelto);
     }
 
     /**
