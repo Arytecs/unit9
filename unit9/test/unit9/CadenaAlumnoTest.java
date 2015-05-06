@@ -135,6 +135,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testQuitaEspacios() {
+        String devuelto=CadenaAlumno.quitaEspacios("   Hola");
+        String real="   Hola".trim();
+        assertEquals(real,devuelto);
     }
 
     /**
