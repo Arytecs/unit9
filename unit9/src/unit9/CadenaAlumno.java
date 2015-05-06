@@ -99,7 +99,8 @@ public class CadenaAlumno {
         
         String resultado1="";
         String resultado2="";
-        
+        if(vector1.length<vector2.length || vector2.length<vector1.length)
+            return false;
         for(int i=0;i<vector1.length;i++)
         {
             if((int) vector1[i]>=65 && (int) vector1[i]<=90)

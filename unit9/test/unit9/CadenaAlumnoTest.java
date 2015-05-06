@@ -79,6 +79,18 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testComparaIgnorandoMayusculas() {
+        boolean igualesDevuelta=CadenaAlumno.comparaIgnorandoMayusculas("entornos", "ento");
+        boolean real="entornos".equalsIgnoreCase("ento");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.comparaIgnorandoMayusculas("ento", "entornos");
+        real="ento".equalsIgnoreCase("entornos");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.comparaIgnorandoMayusculas("entornos", "sonrotne");
+        real="entornos".equalsIgnoreCase("sonrotne");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.comparaIgnorandoMayusculas("entornos", "entornos");
+        real="entornos".equalsIgnoreCase("entornos");
+        assertEquals(real,igualesDevuelta);
     }
 
     /**
