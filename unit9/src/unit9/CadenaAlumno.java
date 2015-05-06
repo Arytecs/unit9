@@ -224,104 +224,6 @@ public class CadenaAlumno {
     }
     
     /**
-     *Método que divide una cadena en un array, separándolo por la regla dada en un limite de elementos.
-     * @param cadena
-     * @param regla
-     * @param limite
-     */
-    public static void muestraSplitLimite(String cadena, String regla, int limite)
-    {
-        String[] resultado=new String[limite];
-        char[] vector=cadena.toCharArray();
-        char[] vector_regla=regla.toCharArray();
-        String elemento="";
-        int cont=0,cont2=0,cont3=0;
-        
-        for(int i=0;i<vector.length-vector_regla.length;i++)
-        {
-            for(int j=0;j<vector_regla.length;j++)
-            {
-                if(vector[i+j]==vector_regla[0])
-                    cont++;
-            }
-            if(cont>0)
-            {
-                if(cont3==limite-1)
-                    i=vector.length;
-                for(int j=cont2;j<i;j++)
-                {
-                    elemento+=vector[j];
-                }
-                resultado[cont3]=elemento;
-                if(cont3==limite-1)
-                    break;
-                    
-                cont3++;
-                cont2=i+1;
-                elemento="";
-            }
-            cont=0;
-        }
-        
-        for(int i=0;i<resultado.length;i++)
-        {
-            System.out.println(resultado[i]);
-        }
-        
-    }
-    
-    /**
-     *Método que divide una cadena en un array, separándolo por la regla dada.
-     * @param cadena
-     * @param regla
-     */
-    public static void muestraSplit(String cadena, String regla)
-    {
-        String[] resultado=new String[100];
-        char[] vector=cadena.toCharArray();
-        char[] vector_regla=regla.toCharArray();
-        String elemento="";
-        int cont=0,cont2=0,cont3=0;
-        
-        for(int i=0;i<vector.length-vector_regla.length;i++)
-        {
-            for(int j=0;j<vector_regla.length;j++)
-            {
-                if(vector[i+j]==vector_regla[0])
-                    cont++;
-            }
-            if(i==vector.length-vector_regla.length-1)
-            {
-                for(int j=cont2;j<vector.length;j++)
-                {
-                    elemento+=vector[j];
-                }
-                resultado[cont3]=elemento;
-                cont3++;
-                break;
-            } 
-            if(cont>0)
-            {
-                for(int j=cont2;j<i;j++)
-                {
-                    elemento+=vector[j];
-                }
-                resultado[cont3]=elemento;
-                    
-                cont3++;
-                cont2=i+1;
-                elemento="";
-            }
-            cont=0;
-        }
-                
-        for(int i=0;i<cont3;i++)
-        {
-            System.out.println(resultado[i]);
-        }
-    }
-    
-    /**
      *Método que devuelve un string sin espacios previos/posteriores.
      * @param cadena
      * @return string sin los espacios
@@ -507,7 +409,7 @@ public class CadenaAlumno {
         char[] vector=cadena.toCharArray();
         String resultado="";
         
-        for(int i=posicionInicio;i<=posicionFinal;i++)
+        for(int i=posicionInicio;i<posicionFinal;i++)
             resultado+=vector[i];
         return resultado;
     }

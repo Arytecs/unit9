@@ -115,21 +115,7 @@ public class CadenaAlumnoTest {
         real="entornos".replaceFirst("n", "a");
         assertEquals(real,igualesDevuelta);
     }
-
-    /**
-     * Test of muestraSplitLimite method, of class CadenaAlumno.
-     */
-    @Test
-    public void testMuestraSplitLimite() {
-    }
-
-    /**
-     * Test of muestraSplit method, of class CadenaAlumno.
-     */
-    @Test
-    public void testMuestraSplit() {
-    }
-
+    
     /**
      * Test of quitaEspacios method, of class CadenaAlumno.
      */
@@ -165,6 +151,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testLongitudCadena() {
+        long devuelto=CadenaAlumno.longitudCadena("Hola que tal");
+        long real="Hola que tal".length();
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -172,6 +161,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testEmpiezaCon() {
+        boolean devuelto=CadenaAlumno.empiezaCon("Hola", "Ho");
+        boolean real="Hola".startsWith("Ho");
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -179,6 +171,10 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testAcabaEn() {
+        boolean devuelto=CadenaAlumno.acabaEn("Hola", "la");
+        boolean real="Hola".endsWith("la");
+        assertEquals(real,devuelto);
+        
     }
 
     /**
@@ -186,6 +182,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testPosicionPrimeraCadena() {
+        long devuelto=CadenaAlumno.posicionPrimeraCadena("Entornos", "no");
+        long real="Entornos".indexOf("no");
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -193,6 +192,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testExtraerSubstring_String_int() {
+        String devuelto=CadenaAlumno.extraerSubstring("Entornos", 1);
+        String real="Entornos".substring(1);
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -200,6 +202,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testExtraerSubstring_3args() {
+        String devuelto=CadenaAlumno.extraerSubstring("Entornos", 2,5);
+        String real="Entornos".substring(2,5);
+        assertEquals(real,devuelto);
     }
 
     /**
@@ -207,6 +212,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testConcatenaCadenas() {
+        String devuelto=CadenaAlumno.concatenaCadenas("Hola", " Estoy bien");
+        String real="Hola".concat(" Estoy bien");
+        assertEquals(real,devuelto);
     }
     
 }
