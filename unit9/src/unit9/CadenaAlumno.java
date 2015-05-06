@@ -79,7 +79,7 @@ public class CadenaAlumno {
      */
     public static boolean esMenor(String cadena1, String cadena2)
     {
-        if(esMayor(cadena1, cadena2))
+        if(esMayor(cadena1, cadena2) || sonIguales(cadena1, cadena2))
             return false;
         else
             return true;

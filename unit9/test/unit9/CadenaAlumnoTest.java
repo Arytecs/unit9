@@ -60,6 +60,18 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testEsMenor() {
+        boolean devuelta=CadenaAlumno.esMenor("entornos", "ento");
+        boolean real="entornos".compareTo("ento")<0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMenor("ento", "entornos");
+        real="ento".compareTo("entornos")<0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMenor("entornos", "sonrotne");
+        real="entornos".compareTo("sonrotne")<0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMenor("entornos", "entornos");
+        real="entornos".compareTo("entornos")<0?true:false;
+        assertEquals(real,devuelta);
     }
 
     /**
