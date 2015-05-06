@@ -98,6 +98,9 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testReemplazaTodos() {
+        String igualesDevuelta=CadenaAlumno.reemplazaTodos("entornos", "ento","a");
+        String real="entornos".replaceAll("ento","a");
+        assertEquals(real,igualesDevuelta);
     }
 
     /**

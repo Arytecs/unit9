@@ -158,9 +158,13 @@ public class CadenaAlumno {
                 vector[posiciones1[i]+j]=vector_cambio[j];
             }
         }
+        for(int i=cont2;i<=vector_regla.length;i++)
+        {
+            vector[i]=vector[i+vector_regla.length-1];
+        }
         
         //Guardamos ese vector ya cambiado en un String
-        for(int i=0;i<vector.length;i++)
+        for(int i=0;i<vector.length-vector_regla.length+vector_cambio.length;i++)
         {
             resultado+=vector[i];
         }
