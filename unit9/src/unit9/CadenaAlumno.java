@@ -58,12 +58,16 @@ public class CadenaAlumno {
         else if(tamanyo1<tamanyo2)
             return false;
         
-        for(int i=0;i<tamanyo;i++)
+        boolean mayor=false;
+        boolean menor=false;
+        for(int i=0;i<tamanyo && mayor==false && menor==false;i++)
         {
             if(vector1[i]>vector2[i])
-                return true;
+                mayor=true;
+            else if(vector1[i]<vector2[i])
+                menor=true;
         }
-        return false;
+        return mayor;
     }
     
     /**

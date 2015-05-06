@@ -33,6 +33,7 @@ public class CadenaAlumnoTest {
         assertEquals(real,igualesDevuelta);
         igualesDevuelta=CadenaAlumno.sonIguales("entornos", "entornos");
         real="entornos".equals("entornos");
+        assertEquals(real,igualesDevuelta);
     }
 
     /**
@@ -40,6 +41,18 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testEsMayor() {
+        boolean devuelta=CadenaAlumno.esMayor("entornos", "ento");
+        boolean real="entornos".compareTo("ento")>0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMayor("ento", "entornos");
+        real="ento".compareTo("entornos")>0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMayor("entornos", "sonrotne");
+        real="entornos".compareTo("sonrotne")>0?true:false;
+        assertEquals(real,devuelta);
+        devuelta=CadenaAlumno.esMayor("entornos", "entornos");
+        real="entornos".compareTo("entornos")>0?true:false;
+        assertEquals(real,devuelta);
     }
 
     /**
