@@ -108,6 +108,12 @@ public class CadenaAlumnoTest {
      */
     @Test
     public void testReemplazaPrimero() {
+        String igualesDevuelta=CadenaAlumno.reemplazaPrimero("entornos", "ento","a");
+        String real="entornos".replaceFirst("ento","a");
+        assertEquals(real,igualesDevuelta);
+        igualesDevuelta=CadenaAlumno.reemplazaPrimero("entornos", "n", "a");
+        real="entornos".replaceFirst("n", "a");
+        assertEquals(real,igualesDevuelta);
     }
 
     /**

@@ -197,11 +197,12 @@ public class CadenaAlumno {
                 else
                     break;
             }
-            if(cont>0)
+            if(cont==vector_regla.length)
             {
                 posicion=i;
                 break;
             }
+            cont=0;
         }
         if(cont==0)
             return cadena;
@@ -210,8 +211,11 @@ public class CadenaAlumno {
         {
             vector[posicion+j]=vector_cambio[j];
         }
-        
-        for(int i=0;i<vector.length;i++)
+        for(int i=posicion+1;i<=vector_regla.length;i++)
+        {
+            vector[i]=vector[i+vector_regla.length-1];
+        }
+        for(int i=0;i<vector.length-vector_regla.length+vector_cambio.length;i++)
         {
             resultado+=vector[i];
         }
