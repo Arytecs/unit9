@@ -190,10 +190,10 @@ public class CadenaAlumnoTest {
     /**
      * Test of extraerSubstring method, of class CadenaAlumno.
      */
-    @Test
+    @Test(expected=StringIndexOutOfBoundsException.class)
     public void testExtraerSubstring_String_int() {
-        String devuelto=CadenaAlumno.extraerSubstring("Entornos", 1);
-        String real="Entornos".substring(1);
+        String devuelto=CadenaAlumno.extraerSubstring("Entornos", 10);
+        String real="Entornos".substring(10);
         assertEquals(real,devuelto);
     }
 
